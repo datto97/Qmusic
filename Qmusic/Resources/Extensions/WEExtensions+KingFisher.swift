@@ -28,9 +28,9 @@ extension UIImageView {
 
 extension String {
     func getImage(completionHandler: @escaping(_ result: UIImage) -> Void){
-        guard let url = URL.init(string: self) else {
-            return
-        }
+//        guard let url = URL.init(string: self) else {
+//            return
+//        }
 //        let resource = ImageResource(downloadURL: url)
 //        KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
 //            if let img = image{
@@ -42,7 +42,7 @@ extension String {
 
 extension UIButton {
     func setImage(from url: URL) {
-        let source = ImageResource(downloadURL: url)
+        let source = KF.ImageResource(downloadURL: url)
         kf.setImage(with: source, for: .normal)
     }
 }
